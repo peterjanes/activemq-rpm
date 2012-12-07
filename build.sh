@@ -1,3 +1,2 @@
 #!/bin/bash
-cp SOURCES/* ${HOME}/rpmbuild/SOURCES/
-rpmbuild -ba SPECS/activemq.spec
+rpmbuild -D '%_topdir %(echo $PWD)' -ba SPECS/activemq.spec
